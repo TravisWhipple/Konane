@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/mainRelativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/player"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="28dp"
+                        android:text="Move Description"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        android:typeface="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/moveDescriptionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="@color/clear"
+                    android:gravity="center_vertical"
+                    android:onClick="saveGame"
+                    android:text="Save    Game"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="@color/clear"
+                    android:gravity="center_vertical"
+                    android:onClick="loadGame"
+                    android:text="Load    Game"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/currentPlayerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="Current Player: "
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+
+                <GridLayout
+                    android:id="@+id/gridView"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </GridLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/rightHandSide"
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Human"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/humanPlayerTileColor"
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/black_circle"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/humanPlayerScoreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="200"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computer"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/computerPlayerTileColor"
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitStart"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/white_circle"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/computerPlayerScoreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="200"
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="0dp">
+
+                <Spinner
+                    android:id="@+id/algorithmSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/createTree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="artificialIntelligence"
+                        android:text="Reset"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"
+                        android:background="@color/orange"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/nextMove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="artificialIntelligence"
+                        android:text="Next"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"
+                        android:background="@color/lightBlue"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/bestMove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="artificialIntelligence"
+                        android:text="Best"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"
+                        android:background="@color/offGray"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/clearAi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="artificialIntelligence"
+                        android:text="Clear"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"
+                        android:background="@color/lightGray"
+                        android:layout_gravity="center_vertical"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ply Cutoff:"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:paddingRight="5dp"/>
+
+                    <EditText
+                        android:id="@+id/plyCutoff"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="2"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:text="Alpha Beta Pruning"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="20dp"/>
+
+                    <CheckBox
+                        android:id="@+id/alphaBetaPruningCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="0">
+
+                    <TextView
+                        android:id="@+id/aiGainedPoints"
+                        android:text="Points Gained: 100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/timeTaken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="101001.0000"
+                    android:textSize="23sp"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/continueButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:layout_gravity="center"
+                    android:onClick="continueButton"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Continue"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/computerMakeMove"
+                    android:onClick="artificialIntelligence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computer Make Move"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:background="@color/orange"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

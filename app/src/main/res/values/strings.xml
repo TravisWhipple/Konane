@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Konane</string>
+
+
+    <string name="DFS">Depth First Search</string>
+    <string name="BFS">Bredth First Search</string>
+    <string name="Third">Third</string>
+    <string name="Fourth">Fourth</string>
+
+
+    <string-array name="algorithms">
+        <item>Depth First Search</item>
+        <item>Breadth First Search</item>
+        <item>Best First Search</item>
+        <item>Branch And Bound</item>
+    </string-array>
+
+    <string-array name="boardSizes">
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+    </string-array>
+
+</resources>

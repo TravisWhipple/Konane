@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    tools:context="twhipple.konane.MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playButton"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:text="Welcome to Konane"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="80sp" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/clear"
+        android:text="Press to play"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_below="@+id/imageView11"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/imageView10"
+        android:layout_toEndOf="@+id/imageView4"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView14"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/imageView12"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/playButton"
+        android:layout_alignTop="@+id/imageView15"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_below="@+id/welcomeTextView"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="33dp"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_toStartOf="@+id/imageView5"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/imageView3"
+        app:srcCompat="@drawable/white_circle" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/imageView16"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="25dp"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/imageView11"
+        android:layout_alignStart="@+id/welcomeTextView"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageView11"
+        android:layout_toStartOf="@+id/imageView13"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/playButton"
+        android:layout_below="@+id/imageView15"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView10"
+        android:layout_marginEnd="39dp"
+        android:layout_toStartOf="@+id/imageView15"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/playButton"
+        android:layout_marginTop="95dp"
+        android:layout_toEndOf="@+id/welcomeTextView"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/imageView3"
+        android:layout_marginStart="99dp"
+        android:layout_toEndOf="@+id/welcomeTextView"
+        app:srcCompat="@drawable/black_circle" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/welcomeTextView"
+        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="145dp"
+        android:layout_toStartOf="@+id/welcomeTextView"
+        app:srcCompat="@drawable/black_circle" />
+
+
+
+</RelativeLayout>
